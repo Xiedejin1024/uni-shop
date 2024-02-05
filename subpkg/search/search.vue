@@ -73,7 +73,6 @@
 					data: {
 						query: this.kw
 					},
-					method: 'GET'
 				})
 
 				console.log(res)

@@ -49,10 +49,15 @@
 				} = await uni.request({
 					url: 'https://api-hmugo-web.itheima.net/api/public/v1/goods/search',
 					data: {
-						Object: this.queryObj
+						query: this.queryObj.query,
+						cid: this.queryObj.cid,
+						pagenum: this.queryObj.pagenum,
+						pagesize: this.queryObj.pagesize,
+						// Object: this.queryObj
 					},
-					method: 'GET'
+
 				})
+				console.log(uni.request.url)
 				this.isloading = false
 				// 只要数据请求完毕，就立即按需调用 cb 回调函数
 				cb && cb()

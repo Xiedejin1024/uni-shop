@@ -14,7 +14,7 @@
 		<uni-swipe-action>
 			<!-- 商品列表区域 -->
 			<block v-for="(goods, i) in cart" :key="i">
-				<uni-swipe-action-item :options="options" @click="swipeActionClickHandler(goods)">
+				<uni-swipe-action-item :right-options="options" @click="swipeActionClickHandler(goods)">
 					<my-goods :goods="goods" :show-radio="true" :show-num="true" @radio-change="radioChangeHandler"
 						@num-change="numberChangeHandler"></my-goods>
 				</uni-swipe-action-item>

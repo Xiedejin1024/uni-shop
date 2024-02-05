@@ -24,8 +24,11 @@ app.$mount()
 console.log('是vue3环境 - 执行代码块')
 import { createSSRApp } from 'vue'
 import App from './App.vue'
+// 1. 导入 store 的实例对象
+import store from './store/store.js'
 export function createApp() {
   const app = createSSRApp(App)
+  app.use(store)
   return {
     app
   }
